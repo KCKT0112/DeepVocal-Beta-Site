@@ -1,5 +1,10 @@
 # deepvocal-public
 
+## Staff
+Website is created using VUE framework.
+Website design: $ERGE
+Website Development: Kurokitu
+
 ## Project setup
 ```
 yarn install
