@@ -1,5 +1,7 @@
 
 import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 import VueProgressBar from 'vue-progressbar'
 import VueMarkdown from 'vue-markdown'
 import fontawesome from '@fortawesome/fontawesome'
@@ -10,6 +12,8 @@ import brands from '@fortawesome/fontawesome-free-brands'
 import App from './App.vue'
 import router from './router'
 import i18n from './i18n'
+
+Vue.use(VueAxios, axios)
 
 fontawesome.library.add(solid)
 fontawesome.library.add(regular)
