@@ -15,15 +15,20 @@ export default {
     let target = this.$route.query.target; // ?target=xxx
     console.log("downlaod target: " + target);
     if (target == "editor") {
+      // setTimeout(
+      //   (window.location.href =
+      //     "http://sharpkey-files.oss-cn-beijing.aliyuncs.com/deep-vocal/Setup_DeepVocal_beta_1.1.0.rar"),
+      //   3000
+      // );
       setTimeout(
         (window.location.href =
-          "http://sharpkey-files.oss-cn-beijing.aliyuncs.com/deep-vocal/Setup_DeepVocal_beta_1.0.6.rar"),
+          "/dl/Setup_DeepVocal_beta_1.1.0.rar"),
         3000
       );
     } else if (target == "toolbox") {
       setTimeout(
         (window.location.href =
-          "http://sharpkey-files.oss-cn-beijing.aliyuncs.com/deep-vocal/Setup_DeepVocalToolBox_beta_1.0.7.rar"),
+          "/dl/Setup_DeepVocalToolBox_beta_1.1.0.rar"),
         3000
       );
     } else if (target == "man_g") {

@@ -16,7 +16,7 @@
           <a place="p_eula_action" :href="p_eula" >{{ $t('p_eula') }}</a>
           <a place="p_instructions_action" :href="p_instructions" >{{ $t('p_instructions') }}</a>
           </i18n>-->
-          <div class="p-v">{{ $t("p_dl_v") }} 1.0.6</div>
+          <div class="p-v">{{ $t("p_dl_v") }} Beta 1.1.0</div>
         </div>
 
         <div class="p-list-2">
@@ -33,7 +33,7 @@
           <a place="p_dvtbtemp_action" :href="p_instructions" >{{ $t('p_dvtbtemp') }}</a>
           <a place="p_instructions_action" :href="p_instructions" >{{ $t('p_instructions') }}</a>
           </i18n>-->
-          <div class="p-v">{{ $t("p_dl_v") }} 1.0.7</div>
+          <div class="p-v">{{ $t("p_dl_v") }} Beta 1.1.0</div>
         </div>
 
         <div class="p-list-3">
