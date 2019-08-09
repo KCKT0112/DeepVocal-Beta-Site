@@ -2,38 +2,44 @@
   <div id="Product">
     <div class="P-content">
       <h1 class="p-t1-1">{{ $t("Select_Product") }}</h1>
+
       <div class="p-list">
-        <div class="p-list-1">
-          <div class="p-logo">
-            <img src="@/assets/dveditor.png" />
+
+        <div class="p-c">
+          <div class="p-list-1">
+            <div class="p-logo">
+              <img src="@/assets/dveditor.png" />
+            </div>
+            <div class="p-title">DeepVocal Editor</div>
+            <div @click="dl_editor" class="p-dl">
+              <font-awesome-icon :icon="['fab','windows']" />
+              {{ $t("p_dl_bnt") }}
+            </div>
+            <!-- <i18n class="p-info" path="P_info_editor" tag="p">
+            <a place="p_eula_action" :href="p_eula" >{{ $t('p_eula') }}</a>
+            <a place="p_instructions_action" :href="p_instructions" >{{ $t('p_instructions') }}</a>
+            </i18n>-->
+            <div class="p-v">{{ $t("p_dl_v") }} Beta 1.1.0</div>
           </div>
-          <div class="p-title">DeepVocal Editor</div>
-          <div @click="dl_editor" class="p-dl">
-            <font-awesome-icon :icon="['fab','windows']" />
-            {{ $t("p_dl_bnt") }}
+
+          <div class="p-list-2">
+            <div class="p-logo">
+              <img src="@/assets/dvtb.png" />
+            </div>
+            <div class="p-title">DeepVocal ToolBox</div>
+            <div @click="dl_toolbox" class="p-dl">
+              <font-awesome-icon :icon="['fab','windows']" />
+              {{ $t("p_dl_bnt") }}
+            </div>
+            <!-- <i18n class="p-info" path="P_info_dvtb" tag="p">
+            <a place="p_eula_action" :href="p_eula" >{{ $t('p_eula') }}</a>
+            <a place="p_dvtbtemp_action" :href="p_instructions" >{{ $t('p_dvtbtemp') }}</a>
+            <a place="p_instructions_action" :href="p_instructions" >{{ $t('p_instructions') }}</a>
+            </i18n>-->
+            <div class="p-v">{{ $t("p_dl_v") }} Beta 1.1.0</div>
           </div>
-          <!-- <i18n class="p-info" path="P_info_editor" tag="p">
-          <a place="p_eula_action" :href="p_eula" >{{ $t('p_eula') }}</a>
-          <a place="p_instructions_action" :href="p_instructions" >{{ $t('p_instructions') }}</a>
-          </i18n>-->
-          <div class="p-v">{{ $t("p_dl_v") }} Beta 1.1.0</div>
         </div>
 
-        <div class="p-list-2">
-          <div class="p-logo">
-            <img src="@/assets/dvtb.png" />
-          </div>
-          <div class="p-title">DeepVocal ToolBox</div>
-          <div @click="dl_toolbox" class="p-dl">
-            <font-awesome-icon :icon="['fab','windows']" />
-            {{ $t("p_dl_bnt") }}
-          </div>
-          <!-- <i18n class="p-info" path="P_info_dvtb" tag="p">
-          <a place="p_eula_action" :href="p_eula" >{{ $t('p_eula') }}</a>
-          <a place="p_dvtbtemp_action" :href="p_instructions" >{{ $t('p_dvtbtemp') }}</a>
-          <a place="p_instructions_action" :href="p_instructions" >{{ $t('p_instructions') }}</a>
-          </i18n>-->
-          <div class="p-v">{{ $t("p_dl_v") }} Beta 1.1.0</div>
         </div>
 
         <div class="p-list-3">
@@ -48,7 +54,7 @@
               {{ $t("p_dl_baidu") }}
             </div>
           </div>
-        </div>
+
       </div>
     </div>
   </div>
@@ -89,7 +95,7 @@ export default {
 
 .P-content {
   width: 100%;
-  height: 90%;
+  height: 70%;
   position: absolute;
   top: 20px;
 }
@@ -115,13 +121,18 @@ export default {
   margin-bottom: 30px;
 }
 
+.p-c {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
 .p-list-1 {
   background-color: #333035;
   margin: 0 auto;
   width: 40%;
   float: left;
   padding: 8% 20px 8%;
-  z-index: 999;
 }
 
 .p-list-2 {
@@ -130,15 +141,12 @@ export default {
   width: 40%;
   float: right;
   padding: 8% 20px 8%;
-  z-index: 999;
 }
 
 .p-list-3 {
+  text-align: center;
+  position: relative;
   width: 100%;
-  position: absolute;
-  left: 0;
-  height: 300;
-  top: 90%;
 }
 
 .p3-box {
@@ -222,11 +230,11 @@ export default {
   }
 
   .p-list-3 {
-    width: 100%;
-    position: relative;
-    top: 10%;
     text-align: center;
+    position: relative;
+    width: 100%;
     font-size: 18px;
+    display: none;
   }
 
   .p3-conn {
