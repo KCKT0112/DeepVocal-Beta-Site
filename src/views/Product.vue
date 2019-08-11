@@ -36,7 +36,7 @@
             <a place="p_dvtbtemp_action" :href="p_instructions" >{{ $t('p_dvtbtemp') }}</a>
             <a place="p_instructions_action" :href="p_instructions" >{{ $t('p_instructions') }}</a>
             </i18n>-->
-            <div class="p-v">{{ $t("p_dl_v") }} Beta 1.1.0</div>
+            <div class="p-v">{{ $t("p_dl_v") }} Beta 1.1.2</div>
           </div>
         </div>
 
