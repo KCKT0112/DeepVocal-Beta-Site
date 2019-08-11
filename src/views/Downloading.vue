@@ -22,13 +22,13 @@ export default {
       // );
       setTimeout(
         (window.location.href =
-          "/dl/Setup_DeepVocal_beta_1.1.0.rar"),
+          "https://dl.deep-vocal.com/editor/Setup_DeepVocal_beta_1.1.0.rar"),
         3000
       );
     } else if (target == "toolbox") {
       setTimeout(
         (window.location.href =
-          "/dl/Setup_DeepVocalToolBox_beta_1.1.0.rar"),
+          "https://dl.deep-vocal.com/toolbox/Setup_DeepVocalToolBox_beta_1.1.2.zip"),
         3000
       );
     } else if (target == "man_g") {
