@@ -10,7 +10,7 @@
             <div class="p-logo">
               <img src="@/assets/dveditor.png" />
             </div>
-            <div class="p-title">DeepVocal Editor</div>
+            <div class="p-title">{{ en }}</div>
             <div @click="dl_editor" class="p-dl">
               <font-awesome-icon :icon="['fab','windows']" />
               {{ $t("p_dl_bnt") }}
@@ -19,14 +19,14 @@
             <a place="p_eula_action" :href="p_eula" >{{ $t('p_eula') }}</a>
             <a place="p_instructions_action" :href="p_instructions" >{{ $t('p_instructions') }}</a>
             </i18n>-->
-            <div class="p-v">{{ $t("p_dl_v") }} Beta 1.1.0</div>
+            <div  class="p-v">{{ $t("p_dl_v") }} {{ ev }}</div>
           </div>
 
           <div class="p-list-2">
             <div class="p-logo">
               <img src="@/assets/dvtb.png" />
             </div>
-            <div class="p-title">DeepVocal ToolBox</div>
+            <div class="p-title">{{ tn }}</div>
             <div @click="dl_toolbox" class="p-dl">
               <font-awesome-icon :icon="['fab','windows']" />
               {{ $t("p_dl_bnt") }}
@@ -36,7 +36,7 @@
             <a place="p_dvtbtemp_action" :href="p_instructions" >{{ $t('p_dvtbtemp') }}</a>
             <a place="p_instructions_action" :href="p_instructions" >{{ $t('p_instructions') }}</a>
             </i18n>-->
-            <div class="p-v">{{ $t("p_dl_v") }} Beta 1.1.2</div>
+            <div class="p-v">{{ $t("p_dl_v") }} {{ tv }}</div>
           </div>
         </div>
 
@@ -64,11 +64,13 @@
 export default {
   name: "Product",
   data() {
-    return {
-      p_eula: "#/Eula",
-      p_dvtbtemp: "#/Eula",
-      p_instructions: "#/Eula"
-    };
+    return{
+      ev: '',
+      tv: ''
+    }
+  },
+  mounted() {
+    this.get_V();
   },
   methods: {
     dl_editor() {
@@ -82,6 +84,18 @@ export default {
     },
     dl_other_baidu() {
       this.$router.push("/Downloading?target=man_b");
+    },
+    get_V() {
+      this.axios.get("https://api.deep-vocal.com/api/editor/version")
+      .then((response) => {
+        this.ev = response.data.version;
+        this.en = response.data.name;
+      });
+      this.axios.get("https://api.deep-vocal.com/api/toolbox/version")
+      .then((response) => {
+        this.tv = response.data.version;
+        this.tn = response.data.name;
+      })
     }
   }
 };

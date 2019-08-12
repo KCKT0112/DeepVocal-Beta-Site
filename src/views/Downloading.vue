@@ -15,22 +15,15 @@ export default {
     let target = this.$route.query.target; // ?target=xxx
     console.log("downlaod target: " + target);
     if (target == "editor") {
-      // setTimeout(
-      //   (window.location.href =
-      //     "http://sharpkey-files.oss-cn-beijing.aliyuncs.com/deep-vocal/Setup_DeepVocal_beta_1.1.0.rar"),
-      //   3000
-      // );
-      setTimeout(
-        (window.location.href =
-          "https://dl.deep-vocal.com/editor/Setup_DeepVocal_beta_1.1.0.rar"),
-        3000
-      );
+      this.axios.get("https://api.deep-vocal.com/api/editor/version")
+      .then((response) => {
+        setTimeout((window.location.href = response.data.dlurl),3000);
+      });
     } else if (target == "toolbox") {
-      setTimeout(
-        (window.location.href =
-          "https://dl.deep-vocal.com/toolbox/Setup_DeepVocalToolBox_beta_1.1.2.zip"),
-        3000
-      );
+      this.axios.get("https://api.deep-vocal.com/api/toolbox/version")
+        .then((response) => {
+          setTimeout((window.location.href = response.data.dlurl),3000);
+        })
     } else if (target == "man_g") {
       setTimeout(
         (window.location.href =
