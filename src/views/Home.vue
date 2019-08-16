@@ -23,6 +23,10 @@
       >
     </div>
 
+    <div class="f-box-2">
+      <p>ICP备案号：<a href="http://ahcainfo.miitbeian.gov.cn/publish/query/indexFirst.action">京ICP备19026601号-1</a></p>
+    </div>
+
     <div class='l-box'>
       <div class='time-one'>2019</div>
       <div class='line'></div>
@@ -140,6 +144,17 @@ export default {
   position: absolute;
   bottom: 4%;
   right: 2%;
+}
+
+.f-box-2 {
+  text-align: center;
+  position: absolute;
+  bottom: 2%;
+  width: 100%;
+  color: darkgray;
+}
+.f-box-2 a{
+  color: darkgray;
 }
 
 .l-box {
