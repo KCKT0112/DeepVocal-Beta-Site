@@ -1,7 +1,8 @@
 <template>
   <div id="Downloading">
     <div class="icon-t">
-      <font-awesome-icon :icon="['fas','download']" />
+      <!-- <font-awesome-icon :icon="['fas','download']" /> -->
+      <img width="20%" src="@/assets/download.png">
     </div>
     <h1 class="t1">{{ $t("downloading") }}</h1>
   </div>
