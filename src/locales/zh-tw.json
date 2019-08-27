@@ -25,5 +25,6 @@
   "load_data_err_title": "出錯了",
   "load_data_err": "抱歉，加載資訊時出錯。請再試一次。",
   "load_dl_err_url": "抱歉，獲取下載地址時出錯。請再試一次。",
-  "maintain": "很抱歉，現時網站正在維護中，請稍後再訪問。"
+  "maintain": "很抱歉，現時網站正在維護中，請稍後再訪問。",
+  "update_date": "更新時間"
 }

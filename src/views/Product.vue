@@ -19,7 +19,7 @@
             <a place="p_eula_action" :href="p_eula" >{{ $t('p_eula') }}</a>
             <a place="p_instructions_action" :href="p_instructions" >{{ $t('p_instructions') }}</a>
             </i18n>-->
-            <div  class="p-v">{{ $t("p_dl_v") }} {{ ev }}</div>
+            <div  class="p-v">{{ $t("p_dl_v") }} {{ ev }} | {{ $t("update_date") }} {{ eudate }}</div>
           </div>
 
           <div class="p-list-2">
@@ -36,7 +36,7 @@
             <a place="p_dvtbtemp_action" :href="p_instructions" >{{ $t('p_dvtbtemp') }}</a>
             <a place="p_instructions_action" :href="p_instructions" >{{ $t('p_instructions') }}</a>
             </i18n>-->
-            <div class="p-v">{{ $t("p_dl_v") }} {{ tv }}</div>
+            <div class="p-v">{{ $t("p_dl_v") }} {{ tv }} | {{ $t("update_date") }} {{ tudate }}</div>
           </div>
         </div>
 
@@ -92,6 +92,7 @@ export default {
       .then((response) => {
         this.ev = response.data.version;
         this.en = response.data.name;
+        this.eudate = response.data.updatetime;
       })
       /* eslint-disable */
       .catch((error) => {
@@ -108,6 +109,7 @@ export default {
       .then((response) => {
         this.tv = response.data.version;
         this.tn = response.data.name;
+        this.tudate = response.data.updatetime;
       })
       /* eslint-disable */
       .catch((error) => {
