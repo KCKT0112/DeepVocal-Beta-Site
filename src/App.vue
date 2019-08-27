@@ -9,6 +9,9 @@
           <a href="#/">
             <li>{{ $t("topbar_index") }}</li>
           </a>
+          <a href="https://forum.deep-vocal.com/">
+            <li>{{ $t("topbar_forum") }}</li>
+          </a>
           <a href="#/Usage">
             <li>{{ $t("topbar_usage") }}</li>
           </a>

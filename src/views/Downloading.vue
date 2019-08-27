@@ -15,26 +15,39 @@ export default {
     let target = this.$route.query.target; // ?target=xxx
     console.log("downlaod target: " + target);
     if (target == "editor") {
-      this.axios.get("https://api.deep-vocal.com/api/editor/version")
+      this.axios.get("https://api.deep-vocal.com/api/editor/versionw")
       .then((response) => {
-        setTimeout((window.location.href = response.data.dlurl),3000);
+        window.location.href = response.data.dlurl;
+      })
+      /* eslint-disable */
+      .catch((error) => {
+        this.tv  = 'null';
+        this.tn = 'null';
+        this.$swal(
+          this.$t("load_data_err_title"),
+          this.$t("load_dl_err_url"),
+          'error'
+        );
       });
     } else if (target == "toolbox") {
-      this.axios.get("https://api.deep-vocal.com/api/toolbox/version")
+      this.axios.get("https://api.deep-vocal.com/api/toolbox/version2")
         .then((response) => {
-          setTimeout((window.location.href = response.data.dlurl),3000);
+        window.location.href = response.data.dlurl;
         })
+        /* eslint-disable */
+        .catch((error) => {
+        this.tv  = 'null';
+        this.tn = 'null';
+        this.$swal(
+          this.$t("load_data_err_title"),
+          this.$t("load_dl_err_url"),
+          'error'
+        );
+      });
     } else if (target == "man_g") {
-      setTimeout(
-        (window.location.href =
-          "https://drive.google.com/drive/folders/1kAlPZnSO9f4pv5wbVJUdNNQXZQOy6pGA?usp=sharing"),
-        3000
-      );
+        window.location.href ="https://drive.google.com/drive/folders/1kAlPZnSO9f4pv5wbVJUdNNQXZQOy6pGA?usp=sharing";
     } else if (target == "man_b") {
-      setTimeout(
-        (window.location.href = "https://share.weiyun.com/5snXMol"),
-        3000
-      );
+        window.location.href = "https://share.weiyun.com/5snXMol";
     } else {
       console.log("Fire!!!!!");
       alert("You are playing with fire");

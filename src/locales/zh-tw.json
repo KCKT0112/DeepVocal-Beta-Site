@@ -1,5 +1,6 @@
 {
   "topbar_index": "首頁",
+  "topbar_forum": "論壇",
   "topbar_usage": "服務條款",
   "usage_title": "服務條款",
   "home_dl_bnt": "下載",
@@ -20,5 +21,8 @@
   "p_dl_man": "使用說明和示例",
   "p_dl_google": "Google 雲端硬碟",
   "p_dl_baidu": "微雲網盤",
-  "p_dl_v": "當前版本"
+  "p_dl_v": "當前版本",
+  "load_data_err_title": "出錯了",
+  "load_data_err": "抱歉，加載資訊時出錯。請再試一次。",
+  "load_dl_err_url": "抱歉，獲取下載地址時出錯。請再試一次。"
 }

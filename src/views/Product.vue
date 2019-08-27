@@ -65,8 +65,10 @@ export default {
   name: "Product",
   data() {
     return{
-      ev: '',
-      tv: ''
+      ev: 'null',
+      tv: 'null',
+      tn: 'null',
+      en: 'null' 
     }
   },
   mounted() {
@@ -90,12 +92,33 @@ export default {
       .then((response) => {
         this.ev = response.data.version;
         this.en = response.data.name;
+      })
+      /* eslint-disable */
+      .catch((error) => {
+        this.ev  = 'null';
+        this.en = 'null';
+        this.$swal(
+          this.$t("load_data_err_title"),
+          this.$t("load_data_err"),
+          'error'
+        );
       });
+
       this.axios.get("https://api.deep-vocal.com/api/toolbox/version")
       .then((response) => {
         this.tv = response.data.version;
         this.tn = response.data.name;
       })
+      /* eslint-disable */
+      .catch((error) => {
+        this.tv  = 'null';
+        this.tn = 'null';
+        this.$swal(
+          this.$t("load_data_err_title"),
+          this.$t("load_data_err"),
+          'error'
+        );
+      });
     }
   }
 };

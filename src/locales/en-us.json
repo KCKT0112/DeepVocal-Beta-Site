@@ -1,5 +1,6 @@
 {
   "topbar_index": "Home",
+  "topbar_forum": "Forum",
   "topbar_usage": "Terms of service",
   "usage_title": "Terms of service",
   "home_dl_bnt": "DOWNLOAD",
@@ -20,5 +21,8 @@
   "p_dl_man": "Manual and Examples",
   "p_dl_google": "Google Drive",
   "p_dl_baidu": "WeiYun NetDisk",
-  "p_dl_v": "Version"
+  "p_dl_v": "Version",
+  "load_data_err_title": "Error",
+  "load_data_err": "Sorry, there was an error loading information. Please try again.",
+  "load_dl_err_url": "Sorry, there was an error in getting the download address. Please try again."
 }

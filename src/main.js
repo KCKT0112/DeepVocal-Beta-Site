@@ -9,11 +9,14 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import solid from '@fortawesome/fontawesome-free-solid'
 import regular from '@fortawesome/fontawesome-free-regular'
 import brands from '@fortawesome/fontawesome-free-brands'
+import VueSweetalert2 from './plugins/vue-sweetalert2'
 import App from './App.vue'
 import router from './router'
 import i18n from './i18n'
 
 Vue.use(VueAxios, axios)
+
+Vue.use(VueSweetalert2)
 
 fontawesome.library.add(solid)
 fontawesome.library.add(regular)
