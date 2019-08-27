@@ -30,7 +30,7 @@ export default {
         );
       });
     } else if (target == "toolbox") {
-      this.axios.get("https://api.deep-vocal.com/api/toolbox/version2")
+      this.axios.get("https://api.deep-vocal.com/api/toolbox/version")
         .then((response) => {
         window.location.href = response.data.dlurl;
         })
