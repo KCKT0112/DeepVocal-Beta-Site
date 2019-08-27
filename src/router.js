@@ -6,6 +6,7 @@ import Eula from './views/Eula.vue'
 import Product from './views/Product.vue'
 import Downloading from './views/Downloading.vue'
 import NotFound from './views/404.vue'
+import Maintain from './views/Maintain.vue'
 
 Vue.use(Router)
 
@@ -41,6 +42,11 @@ export default new Router({
       name: 'NotFound',
       path: '/404',
       component: NotFound
+    },
+    {
+      name: 'Maintain',
+      path: '/Maintain',
+      component: Maintain
     },
     {
       path: '*',

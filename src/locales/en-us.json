@@ -24,5 +24,6 @@
   "p_dl_v": "Version",
   "load_data_err_title": "Error",
   "load_data_err": "Sorry, there was an error loading information. Please try again.",
-  "load_dl_err_url": "Sorry, there was an error in getting the download address. Please try again."
+  "load_dl_err_url": "Sorry, there was an error in getting the download address. Please try again.",
+  "maintain": "Sorry, the website is currently under maintenance, please visit again later."
 }

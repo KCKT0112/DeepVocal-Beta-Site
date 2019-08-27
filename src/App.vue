@@ -85,11 +85,40 @@ export default {
     onLiClick(lang) {
       localStorage.setItem("locale", lang.lang);
       this.$i18n.locale = localStorage.getItem("locale");
+    },
+    loadsettings() {
+      /* eslint-disable */ 
+      //console.log(this.$route.path)
+      this.axios.get("https://api.deep-vocal.com/api/settings")
+      .then((response) => {
+        /* eslint-disable */
+        console.log("Get Settings OK!");
+        if(response.data.value == 'true'){
+          if(this.$route.path == '/Maintain'){
+            //Todo
+          }else{
+            window.location.href = '#/Maintain';
+          }
+        }else{
+          //Todo
+        }
+      })
+      /* eslint-disable */
+      .catch((error) => {
+        /* eslint-disable */
+        console.log("Get Settings Error!");
+      });
+    }
+  },
+  watch:{
+    $route(to,from){
+      this.loadsettings();
     }
   },
   mounted() {
     //  [App.vue specific] When App.vue is finish loading finish the progress bar
     this.$Progress.finish();
+    this.loadsettings();
   },
   created() {
     //  [App.vue specific] When App.vue is first loaded start the progress bar
