@@ -5,7 +5,7 @@ export default {
     // sweetalert2 的设置默认配置的方法
     swal.setDefaults({
       type: 'warning',
-      showCancelButton: true,
+      showCancelButton: false,
       confirmButtonColor: 'rgb(140,212,245)',
       cancelButtonColor: 'rgb(193,193,193)'
     })
