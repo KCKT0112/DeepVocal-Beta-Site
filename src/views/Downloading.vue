@@ -15,7 +15,7 @@ export default {
     let target = this.$route.query.target; // ?target=xxx
     console.log("downlaod target: " + target);
     if (target == "editor") {
-      this.axios.get("https://api.deep-vocal.com/api/editor/versionw")
+      this.axios.get("https://api.deep-vocal.com/api/editor/version")
       .then((response) => {
         window.location.href = response.data.dlurl;
       })
