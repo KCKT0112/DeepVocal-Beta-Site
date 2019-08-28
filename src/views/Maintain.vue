@@ -17,7 +17,7 @@ export default {
 <style>
 .t1 {
   position: absolute;
-  top: 65%;
+  top: 40%;
   font-size: 32px;
   width: 100%;
   text-align: center;
