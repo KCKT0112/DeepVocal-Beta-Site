@@ -68,7 +68,10 @@ export default {
       ev: 'null',
       tv: 'null',
       tn: 'null',
-      en: 'null' 
+      en: 'null',
+      tudate: 'null',
+      eudate: 'null'
+
     }
   },
   mounted() {
@@ -98,6 +101,7 @@ export default {
       .catch((error) => {
         this.ev  = 'null';
         this.en = 'null';
+        this.eudate = 'null';
         this.$swal(
           this.$t("load_data_err_title"),
           this.$t("load_data_err"),
@@ -115,6 +119,7 @@ export default {
       .catch((error) => {
         this.tv  = 'null';
         this.tn = 'null';
+        this.tudate = 'null';
         this.$swal(
           this.$t("load_data_err_title"),
           this.$t("load_data_err"),
