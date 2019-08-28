@@ -1,7 +1,7 @@
 <template>
   <div id="Maintain">
     <div class='icon-t'>
-      <font-awesome-icon :icon="['fas','fa-wrench']" />
+      <font-awesome-icon :icon="['fas','wrench']" />
       <!-- <img width="20%" src="@/assets/maintain.png"> -->
     </div>
     <h1 class='t1'>{{ $t("maintain") }}</h1>
