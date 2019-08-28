@@ -18,7 +18,7 @@
   "p_dvtbtemp": "示例模板文件",
   "P_info_editor": "DeepVocal Editor用于歌声合成以及工程文件的编辑。在使用之前请仔细阅读{p_eula_action}与{p_instructions_action}。当您下载并安装使用本软件时表示已经同意{p_eula_action}。",
   "P_info_dvtb": "DeepVocal Toolbox用于DeepVocal歌声合成引擎的声库制作。关于声库制作的{p_dvtbtemp_action}，您可以下载作为参考。在使用之前请仔细阅读{p_eula_action}与{p_instructions_action}。当您安装并使用本软件时表示您已经同意{p_eula_action}。",
-  "p_dl_man": "使用说明与示例工程下载",
+  "p_dl_man": "使用说明与示例",
   "p_dl_google": "Google 云端硬盘",
   "p_dl_baidu": "微云网盘",
   "p_dl_v": "当前版本",
