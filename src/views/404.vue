@@ -1,8 +1,8 @@
 <template>
   <div id='NotFound'>
     <div class='icon-t'>
-      <!-- <font-awesome-icon :icon="['fas','exclamation-triangle']" /> -->
-      <img width="20%" src="@/assets/notfound.png">
+      <font-awesome-icon :icon="['fas','exclamation-triangle']" />
+      <!-- <img width="20%" src="@/assets/notfound.png"> -->
     </div>
     <h1 class='t1'>{{ $t("notfound") }}</h1>
   </div>
