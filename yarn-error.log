@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add Vue-axios --save
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add -D --registry=https://registry.npm.taobao.org --disturl=https://npm.taobao.org/dist vue-cli-plugin-vue-router-sitemap
 
 PATH: 
-  C:\Program Files (x86)\NetSarang\Xftp 6\;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\foxit\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\foxit\AppData\Local\Programs\Python\Python37-32\;C:\Users\foxit\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;C:\Users\foxit\AppData\Local\Programs\Microsoft VS Code\bin;C:\tools\dart-sdk\bin;C:\Users\foxit\AppData\Roaming\Pub\Cache\bin;C:\Users\foxit\AppData\Roaming\npm;C:\Users\foxit\AppData\Local\Yarn\bin;
+  C:\Users\foxit\Desktop\DeepVocal-Beta-Site\node_modules\.bin;C:\Users\foxit\Desktop\node_modules\.bin;C:\Users\foxit\node_modules\.bin;C:\Users\node_modules\.bin;C:\node_modules\.bin;C:\Program Files\nodejs;C:\Python27\;C:\Python27\Scripts;C:\Program Files (x86)\NetSarang\Xftp 6\;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\foxit\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\foxit\AppData\Local\Programs\Python\Python37-32\;C:\Users\foxit\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;C:\Users\foxit\AppData\Local\Programs\Microsoft VS Code\bin;C:\tools\dart-sdk\bin;C:\Users\foxit\AppData\Roaming\Pub\Cache\bin;C:\Users\foxit\AppData\Roaming\npm;C:\Users\foxit\AppData\Local\Yarn\bin;
 
 Yarn version: 
   1.16.0
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/Vue-axios: Not found
+  Error: https://registry.npm.taobao.org/vue-cli-plugin-vue-router-sitemap: Not found
       at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:65200:18)
       at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:129590:22)
       at Request.emit (events.js:200:13)
@@ -52,6 +52,7 @@ npm manifest:
       "raw-loader": "^3.0.0",
       "sass-loader": "^7.1.0",
       "source-map": "^0.7.3",
+      "sweetalert2": "7.15.1",
       "terser": "4.0.0",
       "vue": "^2.6.10",
       "vue-axios": "^2.1.4",
@@ -8068,6 +8069,11 @@ Lockfile:
       stable "^0.1.8"
       unquote "~1.1.1"
       util.promisify "~1.0.0"
+  
+  sweetalert2@7.15.1:
+    version "7.15.1"
+    resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-7.15.1.tgz#edd9bd4d5501b22e18755686a343c7afe3e9adb2"
+    integrity sha512-0D0W7l63ki1lJoG67RaE7eos6xNVs+v7qu9o1D21hV8ghvaJZ78oBJ0Plk3Ev4xZ8thWqNHjHGjBk2Y+eZQCmw==
   
   table@4.0.2:
     version "4.0.2"
