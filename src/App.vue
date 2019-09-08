@@ -7,20 +7,21 @@
       <div class="top-list">
         <ul>
           <a href="#/">
-            <li>{{ $t("topbar_index") }}</li>
+            <li class='top-list-sp'>{{ $t("topbar_index") }}</li>
           </a>
           <a href="https://forum.deep-vocal.com/">
-            <li>{{ $t("topbar_forum") }}</li>
+            <li class='top-list-sp'>{{ $t("topbar_forum") }}</li>
           </a>
           <a href="#/Usage">
-            <li>{{ $t("topbar_usage") }}</li>
+            <li class='top-list-sp'>{{ $t("topbar_usage") }}</li>
           </a>
           <li
-            class="lang-drop-list"
+            class="top-list-sp lang-drop-list"
+            style="margin-top: 4px;"
             @mouseover="onDplOver($event)"
             @mouseout="onDplOut($event)"
           >
-            <span>Languages</span>
+            <span><font-awesome-icon style='font-size:24px;' :icon="['fas','globe']" /></span>
             <ul v-dpl>
               <li
                 v-for="(lang, i) in langlist"
@@ -30,7 +31,7 @@
             </ul>
           </li>
           <a href="https://weibo.com/u/2652061783">
-            <li>
+            <li class='top-list-sp'>
               <font-awesome-icon
                 style="font-size: 24px;margin-top:26px;"
                 :icon="['fab','weibo']"
@@ -38,15 +39,54 @@
             </li>
           </a>
           <a href="https://twitter.com/boxstar_hx">
-            <li>
+            <li class='top-list-sp'>
               <font-awesome-icon
                 style="font-size: 24px;margin-top:26px;"
                 :icon="['fab','twitter']"
               />
             </li>
           </a>
+          <li class='sp-menu-bnt' @click="hideMenu"><font-awesome-icon style='font-size:24px;' :icon="['fas','bars']" /></li>
         </ul>
       </div>
+
+      <div class="sildebar">
+        <div class="menu" v-show="isShows" @click="hideMenu"></div>
+    
+        <transition name="slide-fade">
+          <div class="sp-m" v-show="isShow">
+            <div class="top-logo"></div>
+            <ul>
+              <a href="#/">
+                <li>{{ $t("topbar_index") }}</li>
+              </a>
+              <a href="https://forum.deep-vocal.com/">
+                <li>{{ $t("topbar_forum") }}</li>
+              </a>
+              <a href="#/Usage">
+                <li>{{ $t("topbar_usage") }}</li>
+              </a>
+            </ul>
+            <div class="sp-m-logo">
+              <div class="sp-m-logo-box">
+                <a href="https://weibo.com/u/2652061783">
+                  <font-awesome-icon
+                    style="font-size: 24px;float:left"
+                    :icon="['fab','weibo']"
+                  />
+                </a>
+                <a href="https://twitter.com/boxstar_hx">
+                  <font-awesome-icon
+                    style="font-size: 24px;float:right"
+                    :icon="['fab','twitter']"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </transition>
+      </div>
+
     </div>
 
     <router-view></router-view>
@@ -59,10 +99,12 @@ export default {
   name: "app",
   data() {
     return {
+      isShow: false,
+      isShows: false,
       langlist: [
-        { name: "简体中文", lang: "zh-cn" },
-        { name: "繁體中文", lang: "zh-tw" },
-        { name: "English", lang: "en-us" }
+        { name: "ZH-CN", lang: "zh-cn" },
+        { name: "ZH-TW", lang: "zh-tw" },
+        { name: "EN-US", lang: "en-us" }
       ]
     };
   },
@@ -110,6 +152,17 @@ export default {
       });
     },
 
+      hideMenu () {
+				if (this.isShow) {
+					this.isShow = false
+					this.isShows = false
+				} else {
+					this.isShow = true
+					this.isShows = true
+				}
+				
+			},
+
     ldv() {
       console.log([
         "###########################$:;|@#################$",
@@ -135,7 +188,8 @@ export default {
         "###############@|'`````````````````````'!@#######$",
         "###################$:```````````````:%###########$",
         "######################@!'````````;&##############$",
-        "Web Design By $ERGE蛇姐            Web By Kurokitu"
+        "Web Design By $ERGE                Web By Kurokitu",
+        "日本語の通訳：アマノケイ さん     ありがとうございます"
       ].join('\n'));
     }
   },
@@ -278,9 +332,79 @@ a {
   text-decoration: none;
 }
 
-.sp-menu-nodis {
-  display: none;
-}
+  .sp-m{
+		color: #fff;
+		position: fixed;
+    width: 286px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 11;
+    overflow-y: auto;
+    overflow-x:hidden;
+    background: #000;
+	}
+	.slide-fade-enter-active {
+	  transition: all .3s ease;
+	}
+	.slide-fade-leave-active {
+	  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+	}
+	.slide-fade-leave-to,.slide-fade-enter{
+	  transform: translateX(-286px);
+	  opacity: 0;
+	}
+	.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    z-index: 10;
+    background: rgba(0,0,0,0.5);
+    overflow-x:hidden;
+	}
+
+  .sp-m ul li {
+    list-style:none;
+  }
+
+  .sp-m ul{
+    width: 286px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+  }
+
+  .sp-m li {
+    width: 286px;
+    padding: 20px;
+  }
+
+  .sp-m li:hover {
+    background-color: #ffffff;
+    color: #1f1d1f;
+  }
+
+  .sp-m-logo {
+    position: fixed;
+    bottom: 0;
+    width: 286px;
+    height: 40px;
+  }
+  .sp-m-logo-box {
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  .sp-menu-nodis {
+    display: none;
+  }
+  .sp-menu-bnt {
+      display: none;
+  }
 /* SP STYLE */
 
 @media (max-width: 600px) {
@@ -294,15 +418,13 @@ a {
     margin-left: 20px;
   }
 
-  .top-list {
+  .top-list-sp {
     display: none;
   }
   .sp-menu-bnt {
     display: block;
-    position: fixed;
-    top: 18px;
-    right: 30px;
-    font-size: 28px;
+    font-size: 24px;
+    margin-top: 0px;
   }
 }
 </style>
@@ -310,7 +432,7 @@ a {
 <style scoped lang="scss">
 .lang-drop-list {
   display: inline-block;
-  min-width: 100px;
+  min-width: 60px;
   position: relative;
   width: auto;
   height: auto;
