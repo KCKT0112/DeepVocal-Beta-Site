@@ -17,11 +17,10 @@
           </a>
           <li
             class="top-list-sp lang-drop-list"
-            style="margin-top: 4px;"
             @mouseover="onDplOver($event)"
             @mouseout="onDplOut($event)"
           >
-            <span><font-awesome-icon style='font-size:24px;' :icon="['fas','globe']" /></span>
+            <span><font-awesome-icon style='font-size:24px; margin-top: 26px;' :icon="['fas','language']" /></span>
             <ul v-dpl>
               <li
                 v-for="(lang, i) in langlist"
