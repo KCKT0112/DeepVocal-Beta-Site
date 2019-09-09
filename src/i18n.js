@@ -25,9 +25,9 @@ let i18nLocale = function(envLocale) {
   console.log("Browser language: " + JsSrc);
   if (l1 != null){
     return l1;
-  } else if (JsSrc == 'zh-cn' || JsSrc == 'zh-tw'){
+  } else if (JsSrc == 'zh-cn' || JsSrc == 'zh-tw' || JsSrc == 'ja-jp'){
     return JsSrc;
-  } else if (JsSrc.includes('en') && (JsSrc.includes('us') || JsSrc.includes('hk') || JsSrc.includes('gb'))){
+  } else if (JsSrc.includes('en') && (JsSrc.includes('us') || JsSrc.includes('hk') || JsSrc.includes('gb') || JsSrc.includes('jp'))){
     return 'en-us'; // Notice: if one has idea to do different actions among us, hk, gb in en language, rewrite here
   } else {
     return envLocale || 'en-us';
@@ -36,7 +36,7 @@ let i18nLocale = function(envLocale) {
 
 let smartFallbackLocale = (defaultLocale) => {
   let JsSrc = (navigator.language || navigator.browserLanguage).toLowerCase();
-  if (JsSrc == "zh-cn" || JsSrc == "en-us" || JsSrc == "zh-tw"){
+  if (JsSrc == "zh-cn" || JsSrc == "en-us" || JsSrc == "zh-tw" || JsSrc == "ja-jp"){
     return JsSrc;
   } else if (JsSrc.endsWith('cn')){
     return 'zh-cn';
@@ -44,6 +44,8 @@ let smartFallbackLocale = (defaultLocale) => {
     return 'zh-tw';
   } else if (JsSrc.includes('en')){
     return 'en-us';
+  } else if (JsSrc.includes('jp')){
+    return 'ja-jp';
   } else {
     return defaultLocale;
   }

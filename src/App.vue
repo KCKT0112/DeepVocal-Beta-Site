@@ -103,7 +103,8 @@ export default {
       langlist: [
         { name: "ZH-CN", lang: "zh-cn" },
         { name: "ZH-TW", lang: "zh-tw" },
-        { name: "EN-US", lang: "en-us" }
+        { name: "EN-US", lang: "en-us" },
+        { name: "JA-JP", lang: "ja-jp" }
       ]
     };
   },

@@ -7,41 +7,48 @@
 
       <div class='E-content'>
         <!-- <p v-html='$t("eula_content")'></p> -->
-        <vue-markdown class="conn" :source="eula_md_content"></vue-markdown>
+        <vue-markdown
+          class="conn"
+          :source="eula_md_content"
+        ></vue-markdown>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import EULA_EN_US from 'raw-loader!!@/assets/eula/en-us.md'
-import EULA_ZH_CN from 'raw-loader!!@/assets/eula/zh-cn.md'
-import EULA_ZH_TW from 'raw-loader!!@/assets/eula/zh-tw.md'
+import EULA_EN_US from "raw-loader!!@/assets/eula/en-us.md";
+import EULA_ZH_CN from "raw-loader!!@/assets/eula/zh-cn.md";
+import EULA_ZH_TW from "raw-loader!!@/assets/eula/zh-tw.md";
+import EULA_JA_JP from "raw-loader!!@/assets/eula/ja-jp.md";
 
 const EULAs = {
-  'en-us': EULA_EN_US,
-  'zh-cn': EULA_ZH_CN,
-  'zh-tw': EULA_ZH_TW
-}
+  "en-us": EULA_EN_US,
+  "zh-cn": EULA_ZH_CN,
+  "zh-tw": EULA_ZH_TW,
+  "ja-jp": EULA_JA_JP
+};
 
 export default {
   name: "Eula",
   computed: {
-    eula_md_content(){
+    eula_md_content() {
       let lang = this.$i18n.locale;
-      if (lang.startsWith('zh')){
-        if(lang.endsWith('cn')){
-          return EULAs['zh-cn'];
-        } else if (lang.endsWith('tw')){
-          return EULAs['zh-tw'];
-        } else return EULAs['zh-cn'];
-      } else if (lang.startsWith('en')){
-        return EULAs['en-us'];
+      if (lang.startsWith("zh")) {
+        if (lang.endsWith("cn")) {
+          return EULAs["zh-cn"];
+        } else if (lang.endsWith("tw")) {
+          return EULAs["zh-tw"];
+        } else return EULAs["zh-cn"];
+      }else if (lang.startsWith("ja")) {
+        return EULAs["ja-jp"];
+      }else if (lang.startsWith("en")) {
+        return EULAs["en-us"];
       } else {
-        return EULAs['en-us'];
+        return EULAs["en-us"];
       }
     }
-  },
+  }
 };
 </script>
 
@@ -76,7 +83,7 @@ export default {
 }
 
 .E-content a {
-  color:#73d5ff;
+  color: #73d5ff;
 }
 
 ::-webkit-scrollbar {
