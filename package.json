@@ -19,7 +19,7 @@
     "babel-runtime": "^6.26.0",
     "core-js": "^2.6.5",
     "jq-fakeloader": "^2.0.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "raw-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "source-map": "^0.7.3",
