@@ -24,7 +24,7 @@
     "sass-loader": "^7.1.0",
     "source-map": "^0.7.3",
     "sweetalert2": "7.15.1",
-    "terser": "4.0.0",
+    "terser": "4.8.1",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.4",
     "vue-i18n": "^8.0.0",
@@ -68,6 +68,6 @@
     "last 2 versions"
   ],
   "resolutions": {
-    "terser": "4.0.0"
+    "terser": "4.8.1"
   }
 }
